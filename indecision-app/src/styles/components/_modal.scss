@@ -1,0 +1,34 @@
+.option_modal{
+	background:#464B5E;
+		
+}
+
+.option_modal .modal__title{
+	color:white;	
+	text-align:center;
+	padding:$s_size;
+	font-size:$s_size;
+}
+
+.option_modal .selected__option{
+	text-align:center;	
+	color:white;
+	font-size:$s_size;
+}
+
+.option_modal button{
+	text-align:center;	
+	background-color: #8357c5;
+    border: none;
+    border-bottom: 3px solid #693cad;
+    color: white;
+    font-weight: 500;
+    padding: 12px;
+    font-size:$s_size;
+    width: 30%;
+}
+
+.ReactModalPortal > div {
+	background:red;
+}
+

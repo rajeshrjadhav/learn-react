@@ -16,14 +16,15 @@ export default class IndecisionApp extends React.Component{
 		this.clearSelectedOption = this.clearSelectedOption.bind(this);
 		this.state={
 			options : props.options,
-			selectedOption : undefined ,
-			optionSelected : 0
+			selectedOption : undefined 
+			
 		};
 		console.log(this.state);
 	} 
 
 	componentWillMount(){
 		console.log("componentWillMount");
+		// Modal.setAppElement('body');
 	}
 
 	componentDidMount(){
@@ -93,20 +94,20 @@ export default class IndecisionApp extends React.Component{
 	onHandlePick(){ 	
 
 		const randomNum = Math.floor(Math.random() * this.state.options.length );
-		console.log(randomNum);
+		
 		let option=this.state.options[randomNum];
+		console.log(option);
 		this.setState((prevState)=>({
 			 selectedOption: option
-			 // optionSelected :option
 		}));		
 		//this.setState({selectedOption:option});
 		console.log(this.state);
 	}
 
 	clearSelectedOption(){
-		this.setState(()=>{
-			selectedOption : undefined
-		});
+		this.setState(()=>({
+			selectedOption : undefined			
+		}));
 	}
 
 	render(){
@@ -124,8 +125,7 @@ export default class IndecisionApp extends React.Component{
 					<Addoption 
 						onHandleAddOption={this.onHandleAddOption}/>	
 					<OptionModal 
-						selectedOption={this.state.selectedOption} 
-						optionSelected={1} 
+						selectedOption={this.state.selectedOption} 						
 						clearSelectedOption={this.clearSelectedOption} />
 				</div>
 			</div>

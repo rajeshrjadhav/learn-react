@@ -1,0 +1,20 @@
+.options{
+	display:flex;
+	justify-content:space-between;
+	background: #3C4251;
+	border-top:1px solid #5B6178;
+}
+
+.options .title{
+	color:white;
+	padding-left:$s_size;
+	font-size:$s_size;
+}
+
+.options .remove-button{
+    color: white;
+    background:none;
+    border: none;    
+    font-size: $s_size;   
+    padding-right:$s_size;
+}

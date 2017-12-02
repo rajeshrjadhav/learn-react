@@ -1,0 +1,32 @@
+.option__body{
+	display:flex;
+	justify-content:space-between;
+	padding:$s_size;	
+	background: #3C4251;
+	border-top:1px solid #5B6178;
+}
+
+.option .message{
+	color:white;
+	text-align:center;	
+	font-size:$s_size;
+}
+
+.option__input{
+	background:none;
+	border:1px solid #5B6178;
+	color:white;
+	padding:1rem;
+	font-size:$s_size;
+	flex-grow: 1;
+}
+.option__addButton{
+	background:none;
+	border:none;
+	color:white;
+	font-size:$s_size;
+	padding:$s_size;
+    background-color: #8357c5;
+}
+
+

@@ -8,8 +8,8 @@
 	font-size:2.6rem;
 	color:white;
 }
-.header__subtitle{
-	//font-size:1.6rem;	
-	font-size:m_size;
+.header__subtitle{	
+	font-size:$s_size;
+	font-weight:400;
 	color:white;
 }

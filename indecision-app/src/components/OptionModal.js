@@ -2,17 +2,25 @@ import React from 'react';
 import Modal from 'react-modal';
 
 const OptionModal =(props)=>{
-	// !!props.selectedOption
+	// onRequestClose={props.clearSelectedOption} 
 	return(	
 		<Modal 
-			isOpen={!!props.istrue} 
-			contentLabel={"selected option"}
-			onRequestCloe={props.clearSelectedOption} >			
-				
-			{ props.istrue && <h1>{props.true}</h1> }
+			className="option_modal"
+			isOpen={!!props.selectedOption} 
+			contentLabel={"Selected option"}
+			>			
+			<h3 className="modal__title">Selected Option</h3>
+			{ props.selectedOption && 
+			<p className="selected__option">
+				{props.selectedOption}
+			</p> }
 
-			<button onClick={props.clearSelectedOption}>Ok</button>
+			<button 
+				className="button" 
+				onClick={props.clearSelectedOption}>Ok</button>
+
 		</Modal>
+		
 	);
 };
 

@@ -2,12 +2,15 @@
     background-color: #3C4251;
     display: flex;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding:0rem $s_size;    
     color:$white;
     font-size:$s_size;
     margin-top:$s_size;
     border-bottom: 1px solid #5B6178;
+}
+.option__header .option__title{
+    font-size:$s_size;
+    font-weight:400;
 }
 .option__header .button{
     background: none;
