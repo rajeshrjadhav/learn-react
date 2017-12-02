@@ -2,7 +2,7 @@
   "name": "indecision-app",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "rajesh jadhav",
+  "author": "Rajesh jadhav",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
