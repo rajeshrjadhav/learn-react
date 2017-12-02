@@ -1,0 +1,29 @@
+.option__header{
+    background-color: #3C4251;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:$white;
+    font-size:$s_size;
+    margin-top:$s_size;
+    border-bottom: 1px solid #5B6178;
+}
+.option__header .button{
+    background: none;
+    border: none;
+    color: $white;
+    font-size:$s_size;
+}
+.option__message{
+    background-color: #3C4251;
+    padding:$s_size;
+    display:flex;
+    justify-content:center;
+    color: $white;
+    font-size:$s_size;
+    border-bottom: 1px solid #5B6178;
+    margin-top:0rem;
+
+}
+

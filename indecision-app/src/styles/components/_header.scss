@@ -1,0 +1,15 @@
+.header{
+	background: $off_black; 
+	padding:1rem; 
+}
+
+//BEM block element identifier
+.header__title{
+	font-size:2.6rem;
+	color:white;
+}
+.header__subtitle{
+	//font-size:1.6rem;	
+	font-size:m_size;
+	color:white;
+}
