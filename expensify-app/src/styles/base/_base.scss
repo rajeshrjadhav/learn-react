@@ -1,0 +1,19 @@
+html{
+	// font-size: 62.5%;
+	//16 * .625 = 10
+}
+//1rem=16px
+
+body{
+	font-family: Helvetica,Arial,Sans-serif;
+	margin:0rem;
+	// background-color:$dark_blue;
+}
+
+button {
+    cursor: pointer;
+}
+
+.is-active{
+	font-weight: bold;
+}
