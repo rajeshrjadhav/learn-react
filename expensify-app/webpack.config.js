@@ -2,7 +2,8 @@ const path=require('path');
 
 module.exports={
 	//entry point
-	entry : './src/app.js',
+	// entry : './src/app.js',
+	entry: './src/playground/redux-101.js',
 	//output file
 	output : {
 		path : path.join(__dirname,'public'),
