@@ -25,6 +25,7 @@ export default class Addoption extends React.Component{
 			e.target.form.elements.option.value='';
 		}
 	}
+	
 	render(){
 		return(
 			<div className="option">

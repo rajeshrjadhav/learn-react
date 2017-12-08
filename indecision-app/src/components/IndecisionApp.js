@@ -16,8 +16,7 @@ export default class IndecisionApp extends React.Component{
 		this.clearSelectedOption = this.clearSelectedOption.bind(this);
 		this.state={
 			options : props.options,
-			selectedOption : undefined 
-			
+			selectedOption : undefined 			
 		};
 		console.log(this.state);
 	} 
