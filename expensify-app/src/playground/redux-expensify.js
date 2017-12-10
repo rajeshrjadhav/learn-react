@@ -1,5 +1,5 @@
-import React from 'React';
-import {createStore,combineReducers} from 'Redux';
+import React from 'react';
+import {createStore,combineReducers} from 'redux';
 import uuid from 'uuid';
 
 //expense reducer
@@ -14,13 +14,9 @@ const expensesReducer=(	state = expensesReducerDefaultState , action )=>{
 			// Allows us to create new array from old one & we can add new elements in that array.
 			return [...state , action.expense ];
 		case 'REMOVE_EXPENSE':			
-			// return state.filter(({ id }) =>{
-			// 		id!=action.id;
-			// 	});
+			return state.filter(({ id }) =>	id != action.id);
 				
-			return state.filter(expense=>								
-					expense.id!=action.id
-			);		
+			// return state.filter( expense=> expense.id != action.id );		
 		default :
 			return state;
 	}
@@ -77,8 +73,8 @@ const expenseOne = store.dispatch(addExpenseGenerator(
 		createdDate : 0
 	} 
 ) );
-console.log(expenseOne);
-console.log(store.getState());
+// console.log(expenseOne);
+// console.log(store.getState());
 
 const expenseTwo = store.dispatch(addExpenseGenerator( 
 	{
@@ -93,15 +89,14 @@ console.log(store.getState());
 
 //REMOVE_EXPENSE
 //action generator for remove expense
-const removeExpenseGenerator = ({id}={})=>(
-
+const removeExpenseGenerator = ({ id } = {} )=>(
 	{
 		type : 'REMOVE_EXPENSE',
 		id : id
 	}
 );
 
-const removeExpense= store.dispatch(removeExpenseGenerator(
+const removeExpense = store.dispatch(removeExpenseGenerator(
 	{ id:expenseOne.expense.id }
 ));
 
