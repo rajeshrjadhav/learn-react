@@ -29,8 +29,7 @@ const resetCount = ({reset}=payload)=>({
 	reset : reset
 });
 
-
-const store=createStore((state={count:0},action )=>{
+const countReducer=(state={count:0},action )=>{
 	console.log("store called------------");
 	switch (action.type)
 	{	
@@ -59,7 +58,9 @@ const store=createStore((state={count:0},action )=>{
 		default :
 			return state;
 	}
-});
+}
+
+const store=createStore(countReducer);
 
 console.log(store.getState());
 // const unsubscribe=store.subscribe(()=>{
@@ -90,3 +91,4 @@ store.dispatch( resetCount( { reset : 0 } ) );
 console.log(store.getState());
 
 
+	
