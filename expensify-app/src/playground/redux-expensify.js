@@ -174,6 +174,13 @@ const getVisibleExpenses = (expenses, { text, sortBy , startDate , endDate } = f
 				expense.description.toLowerCase().includes(text.toLowerCase()) 
 			);				
 		return startDateMatch && endDateMatch && textMatch;
+	}).sort((a,b)=>{
+		if(sortBy == 'date' ){
+			return a.createdDate < b.createdDate ? 1 : -1;
+		}
+		if(sortBy == 'amount' ){
+			return a.amount < b.amount ? 1 : -1;
+		}
 	});	
 };
 
@@ -222,7 +229,7 @@ const setTextFilter = store.dispatch(setTextFilterGenerator('rent'));
 
 // const sortByAmount = store.dispatch(sortByAmountGenerator());
 
-// const sortByDate = store.dispatch(sortByDateGenerator());
+const sortByDate = store.dispatch(sortByDateGenerator());
 
 const setStartDate = store.dispatch(setStartDateGenerator(100));
 const setEndDate = store.dispatch(setEndDateGenerator(250));
