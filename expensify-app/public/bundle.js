@@ -20177,7 +20177,7 @@ var AppRouter = function AppRouter() {
 				null,
 				_react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _ExpenseDashboardPage2.default, exact: true }),
 				_react2.default.createElement(_reactRouterDom.Route, { path: '/create', component: _AddExpensePage2.default }),
-				_react2.default.createElement(_reactRouterDom.Route, { path: '/edit', component: _EditExpensePage2.default }),
+				_react2.default.createElement(_reactRouterDom.Route, { path: '/edit/:id', component: _EditExpensePage2.default }),
 				_react2.default.createElement(_reactRouterDom.Route, { path: '/help', component: _HelpPage2.default }),
 				_react2.default.createElement(_reactRouterDom.Route, { component: _NotFoundPage2.default })
 			)
@@ -20264,7 +20264,8 @@ var EditExpensePage = function EditExpensePage(props) {
   return _react2.default.createElement(
     'div',
     null,
-    'This is Edit Expense Page'
+    'Edit Expense of if ',
+    props.match.params.id
   );
 };
 exports.default = EditExpensePage;

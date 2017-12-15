@@ -11,7 +11,6 @@ const fullName="Rajesh Jadhav";
 // 	return fullName.split(" ")[0];
 // }
 
-
 //es6 arrow function shorthand
 const getFirstName = (fullName) => fullName.split(" ")[0];
 

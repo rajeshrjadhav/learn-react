@@ -2,14 +2,14 @@ const path=require('path');
 
 module.exports={
 	//entry point
-	entry : './src/playground/redux-expensify.js',	
+	entry : './src/app.js',	
 	//output file
 	output : {
 		path : path.join(__dirname,'public'),
 		filename : 'bundle.js'
 	},
 	//babel to transform JSX to JS
-	module :{ 
+	module : { 
 		rules:[
 			{
 				loader : 'babel-loader',
@@ -30,7 +30,7 @@ module.exports={
 	//source map for debugging
 	devtool : 'source-map',
 	//webpack dev server
-	devServer:{
+	devServer: {
 		contentBase : path.join(__dirname,'public'),
 		//serve index.html in place of 404 responses
 		historyApiFallback:true
