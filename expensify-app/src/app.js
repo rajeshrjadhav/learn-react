@@ -31,7 +31,7 @@ store.dispatch(addExpenseGenerator({
 }));
 
 
-store.dispatch(setTextFilterGenerator('Gas'));
+// store.dispatch(setTextFilterGenerator('Gas'));
 
 // setTimeout(()=>{
 	// store.dispatch(setTextFilterGenerator('Bill'));
