@@ -33,9 +33,9 @@ store.dispatch(addExpenseGenerator({
 
 store.dispatch(setTextFilterGenerator('Gas'));
 
-setTimeout(()=>{
-	store.dispatch(setTextFilterGenerator('Bill'));
-},5000);
+// setTimeout(()=>{
+	// store.dispatch(setTextFilterGenerator('Bill'));
+// },5000);
 
 // const state=store.getState(); 
 // const visibleExpenses = getVisibleExpenses(state.expenses , state.filter);	
