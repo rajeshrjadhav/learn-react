@@ -4,7 +4,7 @@ const EditExpensePage = (props) => {
   console.log(props);
     return(
       <div>
-         Edit Expense of if {props.match.params.id}
+        Edit Expense of if {props.match.params.id}
       </div>
     );
 };
