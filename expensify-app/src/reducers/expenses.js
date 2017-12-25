@@ -4,8 +4,7 @@
 const expensesReducerDefaultState = [];
 
 const expensesReducer=(	state = expensesReducerDefaultState , action )=>{
-	console.log("running:"+action.type);	
-	console.log("action:"+JSON.stringify(action));	
+	
 	switch(action.type){
 		case 'ADD_EXPENSE':			
 			// Allows us to create new array from old one 

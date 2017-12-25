@@ -1,67 +1,33 @@
 import React from 'react';
+import ExpenseForm  from './ExpenseForm';
+import { connect } from 'react-redux';
+import { addExpenseGenerator } from '../actions/expenses'; 
 
-class AddExpensePage extends React.Component{
+const AddExpensePage = (props) => {
+	return(
+		<div>
+			<ExpenseForm 
+				onSubmit = {
+					(expense) => {
+						props.dispatch(addExpenseGenerator({	
+							type : 'ADD_EXPENSE',
+							note : expense.note,
+							description : expense.description,
+							amount : expense.amount,
+							createdDate : expense.createdDate
+						}));
 
-	constructor(props){
-		super(props);
-		
-		this.getNote = this.getNote.bind(this);	
-		this.getDescription = this.getDescription.bind(this);	
-		this.getAmount = this.getAmount.bind(this);
-		this.onSubmit = this.onSubmit.bind(this);
-
-		this.state = {
-			note : '',
-			description : '',
-			amount : 0
-		};
-	}		
-
-	getNote(e){
-		this.setState({
-			note : e.target.value
-		});
-	}
-
-	getAmount(e){
-		const amount =  e.target.value;
-
-		this.setState((prevState) => ({
-			amount 
-		}));
-	}
-	getDescription(e){
-		this.setState({
-			description : e.target.value
-		});
-	}
-
-	onSubmit(e){
-		console.log("submit");
-	}
-
-	render(){
-		return(
-			<div>		
-				<input type="text" 
-					onChange={this.getNote} 
-					value={this.state.note} 
-				autoFocus/>
-
-				<input type="number"
-					onChange={this.getAmount}
-					value={this.state.amount}
-				/>
-
-				<textarea 
-					onChange={this.getDescription} 
-					placeholder="add description"
-				></textarea>
-
-				<button onClick={this.onSubmit} >Add</button>
-			</div>
-		)
-	}
+						props.history.push('/');						
+					}
+				} />
+		</div>
+	);
 };
 
-export default AddExpensePage;
+const mapStateToProps = (state) => ({
+
+	expenses : state.expenses
+
+});
+
+export default connect (mapStateToProps) (AddExpensePage);

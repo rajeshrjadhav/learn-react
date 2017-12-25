@@ -6,10 +6,11 @@ import configureStore from './store/configureStore';
 import { addExpenseGenerator, editExpenseGenerator, removeExpesnseGenerator } from './actions/expenses';  
 import { setTextFilterGenerator } from './actions/filters' ;
 import { getVisibleExpenses } from './selectors/expenses'; 
+import moment from 'moment';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-var d = new Date();
+// var d = new Date();
 
 const store = configureStore();
 
@@ -19,16 +20,16 @@ store.dispatch(addExpenseGenerator({
 	description :'Mobile Bill',
 	note : 'Personal Mobile Bill',
 	amount : '350',
-	createdDate : d.getTime()
+	createdDate : 1318781876406
 }));
 
-store.dispatch(addExpenseGenerator({
-	type : 'ADD_EXPENSE',
-	description : 'Gas Bill',
-	note : 'Gas Bill for Month December',
-	amount : '700',
-	createdDate : d.getTime()
-}));
+// store.dispatch(addExpenseGenerator({
+// 	type : 'ADD_EXPENSE',
+// 	description : 'Gas Bill',
+// 	note : 'Gas Bill for Month December',
+// 	amount : '700',
+// 	createdDate : 456
+// }));
 
 
 // store.dispatch(setTextFilterGenerator('Gas'));
@@ -47,3 +48,4 @@ const jsx =(
 );
 
 ReactDOM.render( jsx, document.getElementById('app'));
+
